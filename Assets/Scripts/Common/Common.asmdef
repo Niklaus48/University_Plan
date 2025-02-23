@@ -1,0 +1,17 @@
+{
+    "name": "Common",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8e915f0590043dd4cb36ce82d2c68e76",
+        "Zenject"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
