@@ -1,0 +1,22 @@
+{
+    "name": "MainMenu_Controller",
+    "rootNamespace": "",
+    "references": [
+        "GUID:456229c5f4a5ebc448a356faa2201325",
+        "GUID:57e9b316da8f47f4a8396c49dc1a667b",
+        "GUID:73934759786329f4084e41b79b7af6e4",
+        "GUID:b60b205ac0542ca49a062e93280a0594",
+        "GUID:8e915f0590043dd4cb36ce82d2c68e76",
+        "GUID:11e0de55598a7ff499e4a98d11cabbb2",
+        "GUID:11a159e36f2aafa42890537549f91725"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

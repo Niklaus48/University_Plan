@@ -1,6 +1,8 @@
-﻿using Zenject;
+﻿using Main_Menu.Model;
+using Main_Menu.Model.Interfaces;
+using Zenject;
 
-namespace Main
+namespace Main_Menu
 {
     public class MainSceneInstaller : MonoInstaller
     {

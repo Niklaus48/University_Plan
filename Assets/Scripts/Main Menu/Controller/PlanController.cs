@@ -1,21 +1,20 @@
-﻿using System;
-using Common;
+﻿using Common;
 using Common.Interfaces;
 using Domain.Response;
-using Newtonsoft.Json;
-using TMPro;
+using Main_Menu.Model.Interfaces;
+using Main_Menu.View.Table;
 using UnityEngine;
 using Zenject;
 
-namespace Main
+namespace Main_Menu.Controller
 {
     public class PlanController : MonoBehaviour
     {
         [Inject] private readonly IPlanManager planManager;
         [Inject] private readonly INetworkManager networkManager;
-        
-        [SerializeField] TextMeshProUGUI plansText;
 
+
+        [SerializeField] private PlanOnTableApplier planOnTableApplier;
 
         private void Start()
         {
@@ -24,16 +23,16 @@ namespace Main
             StartCoroutine(networkManager._SendRequestGet<GetPlansResponse>(apiUrl, (result) =>
             {
                 if (result.Success == true)
+                {
                     planManager.SetInitialPlans(result.data);
+                    ShowPlansOnTable();
+                }
             }));
         }
 
-        public void Execute()
+        public void ShowPlansOnTable()
         {
-            plansText.text = JsonConvert.SerializeObject(planManager.GetPlans(new PlanFilter()
-            {
-                Group = { "گروه الف" }
-            }));
+            planOnTableApplier.Init(planManager.GetPlans());
         }
     }
 }

@@ -1,0 +1,17 @@
+{
+    "name": "MainMenu_Domain",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8e915f0590043dd4cb36ce82d2c68e76",
+        "GUID:11e0de55598a7ff499e4a98d11cabbb2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

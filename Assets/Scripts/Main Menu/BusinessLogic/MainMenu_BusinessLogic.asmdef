@@ -1,0 +1,18 @@
+{
+    "name": "MainMenu_BusinessLogic",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8e915f0590043dd4cb36ce82d2c68e76",
+        "GUID:11e0de55598a7ff499e4a98d11cabbb2",
+        "GUID:456229c5f4a5ebc448a356faa2201325"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

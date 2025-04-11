@@ -1,21 +1,24 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Domain.Entities;
 using Domain.Response;
+using Main_Menu.Model.Interfaces;
+using Main.Domain;
 using Main.Helpers;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace Main
+namespace Main_Menu.Model
 {
     public class PlanManager : IPlanManager
     {
         private List<Plan> plans = new List<Plan>();
 
 
-        public List<Plan> GetPlans(PlanFilter filter)
+        public List<Plan> GetPlans(PlanFilter filter = null)
         {
+            if (filter == null) return plans;
+                
             List<Plan> result = plans;
 
             if (filter.CourseName.Count > 0)
