@@ -1,4 +1,6 @@
 ﻿using Domain.Entities;
+using Main_Menu.Mediator;
+using Main_Menu.View.Table.MediatorData;
 using TMPro;
 using UnityEngine;
 
@@ -16,7 +18,7 @@ namespace Main_Menu.View.Table
         [SerializeField] private TextMeshProUGUI time;
         [SerializeField] private TextMeshProUGUI majorName;
         [SerializeField] private TextMeshProUGUI status;
-        
+
         private int id;
 
         public void Init(Plan plan)
@@ -33,6 +35,22 @@ namespace Main_Menu.View.Table
             time.text = plan.Time;
             majorName.text = plan.MajorName;
             status.text = plan.Status;
+        }
+
+        public void OnClick()
+        {
+            MainMenuMediatorManager.Invoke<ClickOnRowMediatorData, int>(new ClickOnRowMediatorData
+            {
+                PlanId = id
+            });
+        }
+
+        public void OnAddButtonClick()
+        {
+            MainMenuMediatorManager.Invoke<AddPlanToChartMediatorData, int>(new AddPlanToChartMediatorData
+            {
+                PlanId = id
+            });
         }
     }
 }

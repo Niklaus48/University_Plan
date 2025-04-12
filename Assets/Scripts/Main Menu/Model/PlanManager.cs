@@ -60,5 +60,10 @@ namespace Main_Menu.Model
         {
             plans = plansResponse.plans;
         }
+
+        public Plan GetPlanById(int id)
+        {
+            return plans.FirstOrDefault(plan => plan.Id == id);
+        }
     }
 }

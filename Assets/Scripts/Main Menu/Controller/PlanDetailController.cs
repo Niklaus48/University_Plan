@@ -8,7 +8,9 @@ namespace Main_Menu.Controller
 {
     public class PlanDetailController : MonoBehaviour
     {
-        [SerializeField] PlanDetailApplier planDetailApplier;
+        [Inject] private ChartListController chartListController;
+        
+        [SerializeField] private PlanDetailApplier planDetailApplier;
 
         private int planId;
 
@@ -20,7 +22,7 @@ namespace Main_Menu.Controller
 
         public void AddPlanToChart()
         {
-            
+            chartListController.Open(planId);
         }
     }
 }

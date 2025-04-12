@@ -9,5 +9,6 @@ namespace Main_Menu.Model.Interfaces
     {
         List<Plan> GetPlans(PlanFilter filter = null);
         void SetInitialPlans(GetPlansResponse plansResponse);
+        Plan GetPlanById(int id);
     }
 }
